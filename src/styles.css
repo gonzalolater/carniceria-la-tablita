@@ -1,0 +1,284 @@
+:root {
+  font-family: Inter, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #171717;
+  background: #f8f3ee;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #fffaf5 0%, #f3e7dc 100%);
+}
+
+button,
+a {
+  font: inherit;
+}
+
+#root {
+  width: 100%;
+}
+
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 20px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(128, 78, 32, 0.1);
+  border-radius: 18px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 15px 30px rgba(80, 43, 13, 0.08);
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #b74b2a, #d77b3c);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.brand-name {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.brand-tag {
+  color: #6b4d3f;
+  font-size: 0.75rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.nav-link {
+  color: #3f2d25;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 28px;
+  margin-top: 32px;
+  align-items: center;
+}
+
+.hero-copy,
+.hero-card,
+.product-card {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(128, 78, 32, 0.1);
+  border-radius: 22px;
+  box-shadow: 0 16px 30px rgba(86, 42, 10, 0.08);
+}
+
+.hero-copy {
+  padding: 44px 36px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #b74b2a;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1.04;
+  color: #1f120c;
+}
+
+.hero-copy p {
+  margin-top: 18px;
+  color: #4d3a32;
+  font-size: 1.05rem;
+  max-width: 56ch;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.primary-btn,
+.secondary-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.9rem 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #b74b2a, #d77b3c);
+  color: white;
+}
+
+.secondary-btn {
+  background: #f2e9df;
+  color: #2d2019;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+  transform: translateY(-1px);
+}
+
+.hero-card {
+  padding: 28px 24px;
+  background: linear-gradient(180deg, #fffaf4 0%, #f9e9dc 100%);
+}
+
+.mini-label {
+  margin: 0;
+  color: #8f5332;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.7rem;
+}
+
+.hero-card h2 {
+  margin: 12px 0 18px;
+  font-size: 2rem;
+}
+
+.hero-card ul {
+  margin: 0 0 20px;
+  padding-left: 18px;
+  color: #4d3a32;
+}
+
+.price {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #812f1f;
+}
+
+.products-section {
+  margin-top: 52px;
+}
+
+.section-heading {
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  gap: 18px;
+}
+
+.product-card {
+  padding: 22px 18px;
+  text-align: left;
+}
+
+.product-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: #f9e9dc;
+  font-size: 1.6rem;
+}
+
+.product-card h3 {
+  margin: 18px 0 10px;
+  font-size: 1.2rem;
+}
+
+.product-card p {
+  margin: 0 0 12px;
+  color: #544139;
+}
+
+.product-card strong {
+  color: #b74b2a;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 860px) {
+  .topbar,
+  .hero {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .topbar {
+    justify-content: start;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .app-shell {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .hero-copy,
+  .hero-card {
+    padding: 24px 18px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
