@@ -1,6 +1,7 @@
 # Netlify config for Vite SPA
 # Ensures devDependencies (vite) are available during build, pins Node version,
-# and provides a SPA redirect.
+# and provides a SPA redirect. Include an explicit production context to
+# override any UI or context-specific settings.
 
 [build]
   # Use npm ci with dev deps, prefer offline and skip audit for speed in CI
@@ -14,8 +15,15 @@
   NODE_ENV = "production"
   CI = "true"
 
+# Explicit production context to ensure Netlify picks the desired build command
+[context.production]
+  command = "npm ci --include=dev --prefer-offline --no-audit --silent && npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
 [context.production.environment]
   NODE_ENV = "production"
+  CI = "true"
 
 [dev]
   command = "npm run dev"
