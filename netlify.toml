@@ -1,15 +1,30 @@
+# Netlify config for Vite SPA
+# Ensures devDependencies (vite) are available during build, pins Node version,
+# and provides a SPA redirect.
+
 [build]
-  command = "npm ci --include=dev && npm run build"
+  # Use npm ci with dev deps, prefer offline and skip audit for speed in CI
+  command = "npm ci --include=dev --prefer-offline --no-audit --silent && npm run build"
   publish = "dist"
   functions = "netlify/functions"
+
+[build.environment]
+  # Pin a stable Node.js runtime supported by Netlify images
+  NODE_VERSION = "18"
+  NODE_ENV = "production"
+  CI = "true"
+
+[context.production.environment]
+  NODE_ENV = "production"
 
 [dev]
   command = "npm run dev"
   port = 5173
   publish = "dist"
 
-# Optional: set redirects for SPA routing
+# SPA routing: serve index.html for all non-file routes
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = true
