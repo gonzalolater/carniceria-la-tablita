@@ -8,9 +8,6 @@
   port = 5173
   publish = "dist"
 
-[context.production.environment]
-  NODE_ENV = "production"
-
 # Optional: set redirects for SPA routing
 [[redirects]]
   from = "/*"
