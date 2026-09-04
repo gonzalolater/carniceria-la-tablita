@@ -19,4 +19,9 @@ Sorteos con Mercado Pago
 
 3) El componente cliente está en src/Raffle.jsx. Envía la petición al endpoint y redirige al checkout de Mercado Pago.
 
+Modo demo (útil para mostrar funcionalidad sin credenciales):
+
+- Local: abrir la app con ?demo=true en la URL (http://localhost:5173/?demo=true) y la compra se simulará y guardará localmente.
+- En producción: definir la variable de entorno VITE_RAFFLE_DEMO=true en Netlify (Build & deploy > Environment). Esto hace que el componente simule la compra y guarde participaciones en localStorage.
+
 Nota: Probar en modo sandbox de Mercado Pago según su documentación cambiando las credenciales a sandbox y revisando el flujo de pagos.
