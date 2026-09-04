@@ -29,7 +29,6 @@
   command = "npm run dev"
   port = 5173
   publish = "dist"
-
 # SPA routing: serve index.html for all non-file routes
 [[redirects]]
   from = "/*"
