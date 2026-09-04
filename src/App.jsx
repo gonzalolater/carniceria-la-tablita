@@ -1,3 +1,5 @@
+import Raffle from './Raffle';
+
 const menuItems = ['Inicio', 'Productos', 'Especiales', 'Contacto'];
 
 const products = [
@@ -72,6 +74,10 @@ export default function App() {
             ))}
           </div>
         </section>
+
+        {/* Raffle component */}
+        <Raffle />
+
       </main>
     </div>
   );
